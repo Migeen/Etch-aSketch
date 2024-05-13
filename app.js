@@ -11,9 +11,9 @@ btn.addEventListener('click',()=>{
 
 const gridBtn = document.querySelector('#grid_size');
 gridBtn.addEventListener("click",()=>{
-    let a = prompt("Enter the grid size you want:");
-    if(parseInt(a)>=0 && parseInt(a)>=100){
-        size= parseInt(a);
+    let a = prompt("Enter the grid size you want:(1-100)");
+    if(parseInt(a)>= 0 && parseInt(a)<=100){
+        let size= parseInt(a);
         deleteGrid();
         createGrid(size);
     }
@@ -47,5 +47,5 @@ function createGrid(grid_size){
     }
 }
 
-let grid_size = 20;
+let grid_size = 16;
 createGrid(grid_size);
